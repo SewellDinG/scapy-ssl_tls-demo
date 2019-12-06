@@ -70,9 +70,14 @@ Out[2]: scapy.layers.ssl_tls.SSL
 
 ## 特征提取
 
+测试使用的原始pcap数据包来自Stratosphere Lab公开的恶意软件捕获结果集，目前公开有349个恶意样本集，涵盖了大多数恶意软件家族的原始流量数据及相应的二进制恶意软件。
+
 1、将原始pcap数据集放到当前目录，赋予pcapSplitter脚本执行权限，并执行脚本，分割的结果会输出到session_pcap目录下以相应家族名命名的文件夹里：
 
 ```
+[Sewell]: ~/Downloads/XDU
+➜  ls *pcap
+Cobalt.pcap	DownloadGuide.pcap	Dridex.pcap	Dynamer.pcap	Razy.pcap	Trojan.pcap
 [Sewell]: ~/Downloads/XDU
 ➜  chmod +x pcapSplitter
 [Sewell]: ~/Downloads/XDU
