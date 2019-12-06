@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for file in ./*.pcap
+do
+  if [ -d "$file" ]
+  then
+    echo "$file is directory"
+  elif [ -f "$file" ]
+  then
+    echo "$file is file"
+    mkdir -p ./session_pcap/${file%.*}
+    PcapSplitter -f $file -o "./session_pcap/"${file%.*} -m connection
+  fi
+done
